@@ -6,8 +6,8 @@ const num = ref(0);
 </script>
 
 <template>
-    <p>Min: <input :value="minNum" /></p>
-    <p>Max: <input :value="maxNum" /></p>
+    <p>Min: <input v-model="minNum" /></p>
+    <p>Max: <input v-model="maxNum" /></p>
     <button @click="()=>{num = Math.floor(Math.random() * (maxNum - minNum + 1) + minNum)}">Generate</button>
     <h3>Number: {{ num }}</h3>
 </template>
