@@ -13,6 +13,7 @@ import NotFound from './components/NotFound.vue';
 
 import Rng from './components/pages/Rng.vue';
 import WordCount from './components/pages/WordCount.vue';
+import Solve24 from './components/pages/Solve24.vue';
 
 import { createRouter, createWebHistory } from 'vue-router';
 
@@ -44,6 +45,11 @@ const router = createRouter({
             path: '/wordcount',
             name: 'WordCount',
             component: WordCount
+        },
+        {
+            path: '/solve24',
+            name: 'Solve24',
+            component: Solve24
         },
 
     ]
