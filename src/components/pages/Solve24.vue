@@ -6,28 +6,48 @@ const b = ref(2);
 const c = ref(3);
 const d = ref(4);
 
-const result = ref();
+const result = ref([]);
 
 </script>
 
 <template>
-    <input v-model.number="a" />
-    <input v-model.number="b" />
-    <input v-model.number="c" />
-    <input v-model.number="d" />
-    <br><br>
+    <input type="number" v-model.number="a" />
+    <input type="number" v-model.number="b" />
+    <input type="number" v-model.number="c" />
+    <input type="number" v-model.number="d" />
     <button @click="() => {
         console.log([a, b, c, d]);
         result = solve24([a, b, c, d], 24);
     }">Solve</button>
     <br>
-    <li v-for="item in result">
-        {{ item }}
-    </li>
+    <div v-if="result.length === 0">
+        <p>No results.</p>
+    </div>
+    <div v-else>
+        <p>{{ result.length }} results.</p>
+        <li v-for="item in result">
+            {{ item }}
+        </li>
+    </div>
 </template>
 
 <style scoped>
+input {
+    height: 1.5rem;
+    width: 5rem;
+    margin: 0.5rem;
+    font-size: 1em;
+    text-align: justify;
+    border-radius: 0.5rem;
+}
+
 li {
-  list-style-type: none;
+  list-style: none;
+  margin: 0.5rem;
+}
+
+p {
+  margin: 0.5rem;
+  font-weight: bold;
 }
 </style>
