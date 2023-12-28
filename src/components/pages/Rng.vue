@@ -1,5 +1,6 @@
 <script setup>
 import { ref } from 'vue'
+import rng from './../functions/rng'
 const minNum = ref(1)
 const maxNum = ref(10)
 const num = ref(0);
@@ -8,7 +9,7 @@ const num = ref(0);
 <template>
     <p>Min: <input v-model="minNum" /></p>
     <p>Max: <input v-model="maxNum" /></p>
-    <button @click="()=>{num = Math.floor(Math.random() * (maxNum - minNum + 1) + minNum)}">Generate</button>
+    <button @click="()=>{num = rng(minNum, maxNum)}">Generate</button>
     <h3>Number: {{ num }}</h3>
 </template>
 
