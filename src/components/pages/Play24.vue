@@ -32,13 +32,17 @@ onMounted(() => {
 
 <template>
     <div class="container">
-        <p class="card">{{ a }}</p>
-        <p class="card">{{ b }}</p>
-        <p class="card">{{ c }}</p>
-        <p class="card">{{ d }}</p>
+        <div class="container">
+            <p class="card">{{ a }}</p>
+            <p class="card">{{ b }}</p>
+        </div>
+        <div class="container">
+            <p class="card">{{ c }}</p>
+            <p class="card">{{ d }}</p>
+        </div>
     </div>
-    <button @click="generate">Generate New</button>
     <button @click="showAns = !showAns;">Show Answer</button>
+    <button @click="generate">Generate New</button>
     <br>
     <div v-show="showAns">
         <p class="info">{{ result.length }} results.</p>
@@ -70,6 +74,7 @@ li {
 
 .container {
     display: flex;
+    flex-wrap: wrap;
 }
 .card {
     border: 0.1rem solid black;
