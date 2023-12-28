@@ -79,10 +79,15 @@ li {
 .card {
     border: 0.1rem solid black;
     border-radius: 0.5rem;
-    padding: 1.5rem;
     margin: 0.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     font-size: 1.5rem;
     font-weight: bold;
+    height: 5.5rem;
+    width: 4rem;
+    box-sizing: border-box;
 }
 
 button {
