@@ -15,6 +15,7 @@ import Rng from './components/pages/Rng.vue';
 import WordCount from './components/pages/WordCount.vue';
 import Solve24 from './components/pages/Solve24.vue';
 import Play24 from './components/pages/Play24.vue';
+import Factor from './components/pages/Factor.vue';
 
 import { createRouter, createWebHistory } from 'vue-router';
 
@@ -57,7 +58,11 @@ const router = createRouter({
             name: 'Play24',
             component: Play24
         },
-
+        {
+            path: '/factor',
+            name: 'Factor',
+            component: Factor
+        },
     ]
 });
 
