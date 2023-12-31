@@ -5,6 +5,7 @@ const num = ref(2024);
 const f = ref([]);
 const pf = ref([]);
 const pfc = ref([]);
+const n = ref(0);
 
 const calc = () => {
     if (num.value <= 0) {
@@ -19,6 +20,7 @@ const calc = () => {
     f.value = factors(num.value);
     pf.value = primeFactors(num.value);
     pfc.value = primeFactorsCount(pf.value);
+    n.value = num.value;
 };
 
 onMounted(() => {
@@ -32,7 +34,7 @@ onMounted(() => {
     <h3>Prime?: {{ (f.length === 0 ? "" : (f.length === 2 ? "yes" : "no")) }}</h3>
     <h3>Factors: {{ f }}</h3>
     <h3>Prime factors: {{ pf }}</h3>
-    <h3>{{ num }} = <span v-for="exponent, base, idx in pfc">{{ idx === 0 ? "" : " × " }}{{ base }}<span class="power" v-if="exponent !== 1">{{ exponent }}</span></span></h3>
+    <h3>{{ n }} = <span v-for="exponent, base, idx in pfc">{{ idx === 0 ? "" : " × " }}{{ base }}<span class="power" v-if="exponent !== 1">{{ exponent }}</span></span></h3>
 </template>
 
 <style scoped>
