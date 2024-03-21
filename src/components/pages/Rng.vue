@@ -7,8 +7,8 @@ const num = ref(0);
 </script>
 
 <template>
-    <p>Min: <input v-model="minNum" /></p>
-    <p>Max: <input v-model="maxNum" /></p>
+    <p>Min: <input type="number" v-model="minNum" /></p>
+    <p>Max: <input type="number" v-model="maxNum" /></p>
     <button @click="()=>{num = rng(minNum, maxNum)}">Generate</button>
     <h3>Number: {{ num }}</h3>
 </template>
