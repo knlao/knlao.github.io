@@ -16,6 +16,7 @@ import WordCount from './components/pages/WordCount.vue';
 import Solve24 from './components/pages/Solve24.vue';
 import Play24 from './components/pages/Play24.vue';
 import Factor from './components/pages/Factor.vue';
+import MyProjects from './components/pages/MyProjects.vue';
 
 import { createRouter, createWebHistory } from 'vue-router';
 
@@ -63,6 +64,11 @@ const router = createRouter({
             name: 'Factor',
             component: Factor
         },
+        {
+            path: '/myprojects',
+            name: 'MyProjects',
+            component: MyProjects
+        }
     ]
 });
 

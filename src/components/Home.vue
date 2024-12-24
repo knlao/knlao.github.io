@@ -5,6 +5,7 @@ import Shortcut from './Shortcut.vue'
 <template>
     <p>Hello World!</p>
     <Shortcut title="About" link="/about" description="about"></Shortcut>
+    <!-- <Shortcut title="My Projects" link="/myprojects" description="list of my fabulous(useless) works"></Shortcut> -->
     <Shortcut title="RNG" link="/rng" description="random number generator"></Shortcut>
     <Shortcut title="Word Counter" link="/wordcount" description="count your words"></Shortcut>
     <Shortcut title="24 Solver" link="/solve24" description="solve the 24 game"></Shortcut>
