@@ -17,6 +17,8 @@ import Solve24 from './components/pages/Solve24.vue';
 import Play24 from './components/pages/Play24.vue';
 import Factor from './components/pages/Factor.vue';
 import MyProjects from './components/pages/MyProjects.vue';
+import Clock from './components/pages/Clock.vue';
+import FourKeys from './components/pages/FourKeys.vue'
 
 import { createRouter, createWebHistory } from 'vue-router';
 
@@ -68,6 +70,16 @@ const router = createRouter({
             path: '/myprojects',
             name: 'MyProjects',
             component: MyProjects
+        },
+        {
+            path: '/clock',
+            name: 'Clock',
+            component: Clock
+        },
+        {
+            path: '/4k',
+            name: 'FourKeys',
+            component: FourKeys
         }
     ]
 });
