@@ -61,6 +61,7 @@ window.addEventListener("keydown", (e) => {
 const reset = () => {
     perfect.value = 0;
     miss.value = 0;
+    combo.value = 0;
     generatemap(10, true);
 }
 
