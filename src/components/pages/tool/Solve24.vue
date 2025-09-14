@@ -1,6 +1,6 @@
 <script setup>
 import { ref } from 'vue';
-import solve24 from './../functions/24game-solver/solve24';
+import solve24 from './../../functions/24game-solver/solve24';
 const a = ref(1);
 const b = ref(2);
 const c = ref(3);

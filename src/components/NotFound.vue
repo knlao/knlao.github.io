@@ -1,3 +1,3 @@
 <template>
-    <p>404 Not Found</p>
+    <p>Why did you cause 404 not found?!</p>
 </template>

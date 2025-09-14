@@ -1,7 +1,7 @@
 <script setup>
 import { ref, onMounted } from 'vue';
-import solve24 from './../functions/24game-solver/solve24';
-import rng from './../functions/rng'
+import solve24 from '../../functions/24game-solver/solve24';
+import rng from '../../functions/rng'
 const a = ref(0);
 const b = ref(0);
 const c = ref(0);

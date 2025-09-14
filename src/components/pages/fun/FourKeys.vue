@@ -1,6 +1,6 @@
 <script setup>
 import { ref, onMounted } from 'vue';
-import rng from './../functions/rng'
+import rng from './../../functions/rng'
 
 const keys = ref("dfjk");
 const m = ref([]);

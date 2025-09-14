@@ -1,6 +1,6 @@
 <script setup>
 import { ref } from 'vue'
-import rng from './../functions/rng'
+import rng from './../../functions/rng'
 const minNum = ref(1)
 const maxNum = ref(10)
 const num = ref(0);

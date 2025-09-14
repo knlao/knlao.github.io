@@ -1,6 +1,6 @@
 <script setup>
 import { ref, onMounted } from 'vue';
-import { factors, primeFactors, primeFactorsCount } from './../functions/factor';
+import { factors, primeFactors, primeFactorsCount } from './../../functions/factor';
 const num = ref(new Date().getFullYear());
 const f = ref([]);
 const pf = ref([]);

@@ -5,13 +5,39 @@ import { ref, computed } from 'vue';
 </script>
 
 <template>
-  <router-link :to="{ name: 'Home' }">Home</router-link> |
-  <router-link :to="{ name: 'About' }">About</router-link>
-  <div class="separator"></div>
-  <router-view></router-view>
+  <div class="main">
+    <router-link class="item" :to="{ name: 'Home' }">Home</router-link> |
+    <router-link class="item" :to="{ name: 'About' }">About</router-link>
+
+    <div class="dropdown item">
+      <router-link class="dropbtn" :to="{ name: 'Tools' }">Tools</router-link>
+      <div class="dropdown-content">
+        <router-link :to="{ name: 'WordCount' }">Word Counter</router-link>
+        <router-link :to="{ name: 'Factor' }">Factorization</router-link>
+        <router-link :to="{ name: 'Solve24' }">Play 24 Solver</router-link>
+      </div>
+    </div>
+
+        <div class="dropdown item">
+      <router-link class="dropbtn" :to="{ name: 'Fun' }">Fun</router-link>
+      <div class="dropdown-content">
+        <router-link :to="{ name: 'Play24' }">Play 24</router-link>
+        <router-link :to="{ name: 'FourKeys' }">4k Mania</router-link>
+      </div>
+    </div>
+    
+    <div class="separator"></div>
+    
+    <router-view></router-view>
+  </div>
 </template>
 
 <style scoped>
+.main {
+  width: 50%;
+  margin: auto;
+}
+
 .separator {
   height: 0;
   border: 0.05rem solid;
@@ -19,17 +45,34 @@ import { ref, computed } from 'vue';
   border-radius: 99px;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
+.item {
+  margin: 0 10px;
 }
 
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
+.dropdown {
+  position: relative;
+  display: inline-block;
 }
 
-.logo.vue:hover {
-  filter: drop-shadow(0 0 2em #42b883aa);
-}</style>
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #eee;
+  min-width: 160px;
+  /* box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2); */
+  z-index: 1;
+}
+
+.dropdown-content a {
+  padding: 8px 10px;
+  display: block;
+}
+
+.dropdown-content a:hover {
+  background-color: #ddd;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+</style>
