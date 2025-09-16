@@ -34,7 +34,7 @@ import { ref, computed } from 'vue';
 
 <style scoped>
 .main {
-  width: 50%;
+  max-width: 600px;
   margin: auto;
 }
 

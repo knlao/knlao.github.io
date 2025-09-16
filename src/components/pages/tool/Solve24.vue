@@ -11,11 +11,13 @@ const result = ref([]);
 </script>
 
 <template>
-    <input type="number" v-model.number="a" />
-    <input type="number" v-model.number="b" />
-    <input type="number" v-model.number="c" />
-    <input type="number" v-model.number="d" />
-    <button @click="() => {
+    <div class="container">
+        <input type="number" class="card" v-model.number="a" @focus="$event.target.select()" />
+        <input type="number" class="card" v-model.number="b" @focus="$event.target.select()" />
+        <input type="number" class="card" v-model.number="c" @focus="$event.target.select()" />
+        <input type="number" class="card" v-model.number="d" @focus="$event.target.select()" />
+    </div>
+    <button class="btn" @click="() => {
         console.log([a, b, c, d]);
         result = solve24([a, b, c, d], 24);
     }">Solve</button>
@@ -49,6 +51,37 @@ li {
 p {
   margin: 0.5rem;
   font-weight: bold;
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.card {
+    text-align: center;
+    border: 0.1rem solid black;
+    border-radius: 0.5rem;
+    margin: 0.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5rem;
+    font-weight: bold;
+    height: 5.5rem;
+    width: 4rem;
+    box-sizing: border-box;
+}
+
+.btn {
+    margin: 0.5rem;
+    width: 19rem;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
 }
 </style>
 
