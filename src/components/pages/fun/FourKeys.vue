@@ -79,10 +79,10 @@ onMounted(() => {
 
     <br>
     <div class="window">
-        <div class="infobox">
+        <div class="infobox top">
             <p>Perfect: {{ perfect }}</p>
-            <p>Miss: {{ miss }}</p>
             <p>Combo: {{ combo }}</p>
+            <p>Miss: {{ miss }}</p>
         </div>
         <div class="gameframe" :class="[bad ? 'wrong' : 'normal']">
             <table class="game" :class="[bad ? 'wrong' : 'normal']">
@@ -108,20 +108,37 @@ onMounted(() => {
 
 <style scoped>
 
-.window {
+/* .window {
     display: flex;
     justify-content: center;
     width: auto;
+} */
+
+.gameframe {
+    width: 100%;
+    border-color: gray none;
+    border-style: solid;
+    border-width: 1px;
+    box-sizing: border-box;
 }
 
 .game {
     margin: auto;
+    min-width: 75%;
 }
 
 .infobox {
-    width: 200px;
+    margin: auto;
     padding: 25px;
     border: gray solid 1px;
+}
+
+.top {
+    display: flex;
+}
+
+.top p {
+    margin: auto;
 }
 
 .s {
@@ -143,7 +160,8 @@ table {
 }
 
 td {
-    width: 100px;
+    /* width: 100px; */
+    width: auto;
     height: 60px;
     border-top: lightgray solid 1px;
     border-bottom: lightgray solid 1px;
